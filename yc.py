@@ -70,7 +70,7 @@ def dataframe_to_sql(dataframe,table_name,index_true_or_false=False):
     dataframe.to_sql(f'{table_name}', con=engine,if_exists='append',index=index_true_or_false)
 
 def main():
-    for page in range(40,51):
+    for page in range(1,51):
         fangs=get_response_sel_from_each_page(page)
         dataframe=get_house_info_from_fangs(fangs)
         try:
